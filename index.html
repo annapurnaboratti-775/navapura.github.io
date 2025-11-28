@@ -1,126 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navapura — City Design Project</title>
-  <meta name="description" content="Navapura — a dark-mode, modern city design project for DAA: zoning, transport, sustainability, maps and visuals.">
-  <meta name="theme-color" content="#021014">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="nav">
-    <div class="nav-inner container">
-      <a class="brand" href="index.html">Navapura</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="maps.html">Maps</a>
-        <a href="design.html">Design</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-      <button id="navToggle" class="nav-toggle" aria-label="Open menu">☰</button>
+  <!-- PARALLAX BACKGROUND -->
+  <div class="parallax-bg">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <section class="hero">
+    <h1 class="title">NAVAPURA</h1>
+    <p class="subtitle">A Futuristic Smart City — DAA Project</p>
+    <a href="#team" class="scroll-btn">▼ Explore</a>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section id="team" class="team-section">
+    <h2 class="team-title">Our Team</h2>
+    <p class="team-sub">Meet the creators behind Navapura City Design</p>
+
+    <div class="team-container">
+
+      <!-- CARD 1 -->
+      <div class="team-card" data-tilt>
+        <div class="glow"></div>
+        <h3>Annapurna</h3>
+        <p>City Planning & Concept</p>
+        <a href="https://github.com/annapurna-repo" target="_blank" class="code-btn">View Code</a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="team-card" data-tilt>
+        <div class="glow"></div>
+        <h3>Akmal</h3>
+        <p>Maps, Analysis & Layout</p>
+        <a href="https://github.com/akmal-repo" target="_blank" class="code-btn">View Code</a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="team-card" data-tilt>
+        <div class="glow"></div>
+        <h3>Amruta</h3>
+        <p>UX, Design & Documentation</p>
+        <a href="https://github.com/amruta-repo" target="_blank" class="code-btn">View Code</a>
+      </div>
+
     </div>
-  </header>
+  </section>
 
-  <!-- HERO with parallax layers -->
-  <main>
-    <section class="hero">
-      <div class="parallax">
-        <div class="layer bg"></div>
-        <div class="layer mid"></div>
-        <div class="layer fore"></div>
-      </div>
-
-      <div class="hero-content container">
-        <div class="hero-text">
-          <h1>Navapura</h1>
-          <p class="lead">A premium smart-city design for the DAA project — sustainable, connected, and human-centered.</p>
-          <p class="hero-cta">
-            <a href="design.html" class="btn primary">Explore Design</a>
-            <a href="maps.html" class="btn ghost">View Maps</a>
-          </p>
-        </div>
-
-        <div class="hero-cards" id="heroCards">
-          <article class="card" data-tilt>
-            <h3>Smart Zoning</h3>
-            <p>Mixed-use nodes to reduce travel and increase local activity.</p>
-          </article>
-          <article class="card" data-tilt>
-            <h3>Mobility Network</h3>
-            <p>Integrated rapid transit, buses, bike lanes and pedestrian-first streets.</p>
-          </article>
-          <article class="card" data-tilt>
-            <h3>Green Corridors</h3>
-            <p>Continuous parks and stormwater-friendly streets to cool the city.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features with strong animations -->
-    <section class="features container" id="features">
-      <h2 class="section-title">Core Strategies</h2>
-      <div class="grid">
-        <div class="feature reveal" data-delay="0">
-          <div class="feature-icon">⚡</div>
-          <h3>Energy & Resources</h3>
-          <p>District-level renewable generation, energy sharing and efficient water systems.</p>
-        </div>
-        <div class="feature reveal" data-delay="150">
-          <div class="feature-icon">🛣️</div>
-          <h3>Transport Hierarchy</h3>
-          <p>Prioritise public transit, safe cycling and walkability at neighborhood scale.</p>
-        </div>
-        <div class="feature reveal" data-delay="300">
-          <div class="feature-icon">🌳</div>
-          <h3>Green Infrastructure</h3>
-          <p>Urban forests, bioswales, and connected open spaces for biodiversity and health.</p>
-        </div>
-        <div class="feature reveal" data-delay="450">
-          <div class="feature-icon">🏘️</div>
-          <h3>Mixed-Use Communities</h3>
-          <p>Housing diversity, commerce and civic spaces to support vibrant life.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Showcase / quick links -->
-    <section class="showcase container">
-      <a class="show-item reveal" href="maps.html" data-delay="0">
-        <h3>City Maps</h3>
-        <p>View zoning and transport maps</p>
-      </a>
-      <a class="show-item reveal" href="design.html" data-delay="100">
-        <h3>Design Report</h3>
-        <p>Read the full city design notes</p>
-      </a>
-      <a class="show-item reveal" href="gallery.html" data-delay="200">
-        <h3>Gallery</h3>
-        <p>Renders & diagrams</p>
-      </a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Navapura</strong>
-        <p class="muted">City Design Project · DAA · 2025</p>
-      </div>
-      <div>
-        <p class="muted">Built by: Annapurna Boratti</p>
-        <p class="muted">Contact: lalitaboratti@gmail.com</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/yourusername/navapura" target="_blank" rel="noopener">Repository</a>
-      </div>
-    </div>
+  <footer class="footer">
+    © 2025 Navapura — Designed for DAA Project
   </footer>
 
   <script src="main.js"></script>
