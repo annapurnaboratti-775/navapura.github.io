@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Navapura City Design Project</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Navapura — City Design Project</title>
+  <meta name="description" content="Navapura — a sustainable smart city project for DAA. Plans for zoning, transport, green spaces and energy."/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to Navapura</h1>
-  <p>This is my DAA city design project website.</p>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand"><a href="index.html">Navapura</a></h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="design.html">Design</a>
+        <a href="maps.html">Maps</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Future-ready. Green. Connected.</h2>
+      <p>Navapura is a conceptual smart city designed for the DAA project: focusing on sustainable infrastructure, efficient transport, and human-centered public spaces.</p>
+      <p><a class="cta" href="design.html">Explore the design</a></p>
+    </section>
+
+    <section class="features">
+      <article>
+        <h3>Smart Zoning</h3>
+        <p>Mixed-use neighborhoods to reduce commute times and strengthen communities.</p>
+      </article>
+      <article>
+        <h3>Green Corridors</h3>
+        <p>Linear parks and tree-lined streets that connect neighborhoods and improve air quality.</p>
+      </article>
+      <article>
+        <h3>Integrated Transit</h3>
+        <p>Multi-modal transport with emphasis on public transit, cycling, and walking.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Navapura — City Design Project · Built for DAA</p>
+    </div>
+  </footer>
+
+  <script>
+    // small script to set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
