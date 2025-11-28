@@ -1,59 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Navapura — City Design Project</title>
-  <meta name="description" content="Navapura — a sustainable smart city project for DAA. Plans for zoning, transport, green spaces and energy."/>
+  <meta name="description" content="Navapura — a dark-mode, modern city design project for DAA: zoning, transport, sustainability, maps and visuals.">
+  <meta name="theme-color" content="#021014">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="brand"><a href="index.html">Navapura</a></h1>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="design.html">Design</a>
-        <a href="maps.html">Maps</a>
-        <a href="gallery.html">Gallery</a>
+  <header class="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="index.html">Navapura</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
+        <a href="maps.html">Maps</a>
+        <a href="design.html">Design</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="cta">Contact</a>
       </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu">☰</button>
     </div>
   </header>
 
-  <main class="container">
+  <!-- HERO with parallax layers -->
+  <main>
     <section class="hero">
-      <h2>Future-ready. Green. Connected.</h2>
-      <p>Navapura is a conceptual smart city designed for the DAA project: focusing on sustainable infrastructure, efficient transport, and human-centered public spaces.</p>
-      <p><a class="cta" href="design.html">Explore the design</a></p>
+      <div class="parallax">
+        <div class="layer bg"></div>
+        <div class="layer mid"></div>
+        <div class="layer fore"></div>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-text">
+          <h1>Navapura</h1>
+          <p class="lead">A premium smart-city design for the DAA project — sustainable, connected, and human-centered.</p>
+          <p class="hero-cta">
+            <a href="design.html" class="btn primary">Explore Design</a>
+            <a href="maps.html" class="btn ghost">View Maps</a>
+          </p>
+        </div>
+
+        <div class="hero-cards" id="heroCards">
+          <article class="card" data-tilt>
+            <h3>Smart Zoning</h3>
+            <p>Mixed-use nodes to reduce travel and increase local activity.</p>
+          </article>
+          <article class="card" data-tilt>
+            <h3>Mobility Network</h3>
+            <p>Integrated rapid transit, buses, bike lanes and pedestrian-first streets.</p>
+          </article>
+          <article class="card" data-tilt>
+            <h3>Green Corridors</h3>
+            <p>Continuous parks and stormwater-friendly streets to cool the city.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="features">
-      <article>
-        <h3>Smart Zoning</h3>
-        <p>Mixed-use neighborhoods to reduce commute times and strengthen communities.</p>
-      </article>
-      <article>
-        <h3>Green Corridors</h3>
-        <p>Linear parks and tree-lined streets that connect neighborhoods and improve air quality.</p>
-      </article>
-      <article>
-        <h3>Integrated Transit</h3>
-        <p>Multi-modal transport with emphasis on public transit, cycling, and walking.</p>
-      </article>
+    <!-- Features with strong animations -->
+    <section class="features container" id="features">
+      <h2 class="section-title">Core Strategies</h2>
+      <div class="grid">
+        <div class="feature reveal" data-delay="0">
+          <div class="feature-icon">⚡</div>
+          <h3>Energy & Resources</h3>
+          <p>District-level renewable generation, energy sharing and efficient water systems.</p>
+        </div>
+        <div class="feature reveal" data-delay="150">
+          <div class="feature-icon">🛣️</div>
+          <h3>Transport Hierarchy</h3>
+          <p>Prioritise public transit, safe cycling and walkability at neighborhood scale.</p>
+        </div>
+        <div class="feature reveal" data-delay="300">
+          <div class="feature-icon">🌳</div>
+          <h3>Green Infrastructure</h3>
+          <p>Urban forests, bioswales, and connected open spaces for biodiversity and health.</p>
+        </div>
+        <div class="feature reveal" data-delay="450">
+          <div class="feature-icon">🏘️</div>
+          <h3>Mixed-Use Communities</h3>
+          <p>Housing diversity, commerce and civic spaces to support vibrant life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase / quick links -->
+    <section class="showcase container">
+      <a class="show-item reveal" href="maps.html" data-delay="0">
+        <h3>City Maps</h3>
+        <p>View zoning and transport maps</p>
+      </a>
+      <a class="show-item reveal" href="design.html" data-delay="100">
+        <h3>Design Report</h3>
+        <p>Read the full city design notes</p>
+      </a>
+      <a class="show-item reveal" href="gallery.html" data-delay="200">
+        <h3>Gallery</h3>
+        <p>Renders & diagrams</p>
+      </a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Navapura — City Design Project · Built for DAA</p>
+    <div class="container footer-grid">
+      <div>
+        <strong>Navapura</strong>
+        <p class="muted">City Design Project · DAA · 2025</p>
+      </div>
+      <div>
+        <p class="muted">Built by: Annapurna Boratti</p>
+        <p class="muted">Contact: lalitaboratti@gmail.com</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/yourusername/navapura" target="_blank" rel="noopener">Repository</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // small script to set copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
-
