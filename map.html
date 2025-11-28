@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Maps — Navapura</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="index.html">Navapura</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="maps.html" class="active">Maps</a>
+        <a href="design.html">Design</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:50px">
+    <h1>City Maps</h1>
+    <p class="muted">Zoning map, land-use layers, mobility networks, and green infrastructure.</p>
+
+    <section style="margin-top:30px">
+      <h2>Zoning Map</h2>
+      <figure class="reveal" data-delay="100">
+        <img src="assets/map.png" alt="Navapura Zoning Map" style="width:100%; border-radius:12px;">
+        <figcaption class="muted">Zoning distribution across the Navapura plan</figcaption>
+      </figure>
+    </section>
+
+    <section style="margin-top:30px">
+      <h2>Transport Network</h2>
+      <figure class="reveal" data-delay="200">
+        <img src="assets/transport.png" alt="Transport Network" style="width:100%; border-radius:12px;">
+        <figcaption class="muted">MRT Lines, Bus Corridors, Cycling Tracks</figcaption>
+      </figure>
+    </section>
+
+    <section style="margin-top:30px">
+      <h2>Green Infrastructure</h2>
+      <figure class="reveal" data-delay="300">
+        <img src="assets/green.png" alt="Green Corridors" style="width:100%; border-radius:12px;">
+        <figcaption class="muted">Urban forests, parks, and ecological buffers</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Navapura</strong></div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
