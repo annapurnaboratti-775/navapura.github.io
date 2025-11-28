@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Gallery — Navapura</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="index.html">Navapura</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="maps.html">Maps</a>
+        <a href="design.html">Design</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:50px">
+    <h1>Gallery</h1>
+    <p class="muted">Renders, diagrams, charts, and planning visuals.</p>
+
+    <section class="reveal" data-delay="100" style="margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px">
+      <img src="assets/photo1.jpg" alt="Render 1" class="gallery-img">
+      <img src="assets/photo2.jpg" alt="Render 2" class="gallery-img">
+      <img src="assets/photo3.jpg" alt="Render 3" class="gallery-img">
+      <img src="assets/photo4.jpg" alt="Render 4" class="gallery-img">
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Navapura</strong></div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
