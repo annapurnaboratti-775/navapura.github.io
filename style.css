@@ -1,0 +1,41 @@
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --accent: #157a6e;
+  --muted: #555;
+  --container-width: 1000px;
+  --radius: 10px;
+  --gap: 18px;
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#222; }
+.container { max-width:var(--container-width); margin:0 auto; padding:20px; }
+
+.site-header { background:linear-gradient(90deg, rgba(21,122,110,0.08), rgba(21,122,110,0.03)); border-bottom:1px solid rgba(0,0,0,0.05); }
+.site-header .container { display:flex; align-items:center; gap:20px; padding:14px 20px; }
+.brand { margin:0; font-size:1.1rem; }
+.brand a { text-decoration:none; color:var(--accent); font-weight:700; }
+.main-nav { margin-left:auto; display:flex; gap:14px; }
+.main-nav a { text-decoration:none; color:var(--muted); padding:8px 10px; border-radius:6px; }
+.main-nav a:hover { background:rgba(21,122,110,0.06); color:var(--accent); }
+
+.hero { background:var(--card); border-radius:var(--radius); padding:28px; margin-top:18px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
+.hero h2 { margin-top:0; color:var(--accent); font-size:1.6rem; }
+.hero p { color:var(--muted); line-height:1.5; }
+
+.cta { display:inline-block; margin-top:12px; background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; }
+.cta:hover { opacity:0.95; }
+
+.features { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:16px; margin-top:18px; }
+.features article { background:var(--card); border-radius:10px; padding:16px; box-shadow:0 6px 14px rgba(0,0,0,0.03); }
+.features h3 { margin:0 0 8px 0; color:#1a6a5e; font-size:1.05rem; }
+
+.site-footer { margin-top:28px; padding:18px 0; color:var(--muted); text-align:center; }
+
+/* Responsive */
+@media (max-width:600px){
+  .site-header .container { flex-direction:column; align-items:flex-start; gap:8px; }
+  .main-nav { width:100%; justify-content:space-between; }
+  .hero { padding:18px; }
+}
