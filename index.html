@@ -1,66 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Navapura — City Design Project</title>
+  <meta name="description" content="Navapura — a dark-mode, neon city design project for DAA" />
 
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- PARALLAX BACKGROUND -->
-  <div class="parallax-bg">
-    <div class="circle c1"></div>
-    <div class="circle c2"></div>
-    <div class="circle c3"></div>
+  <div class="app">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-blob"></div>
+        <div class="brand-text">
+          <div class="brand-title">Navapura</div>
+          <div class="brand-sub">City Design · DAA Project</div>
+        </div>
+      </div>
+
+      <nav class="topnav">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#maps" class="nav-link">Maps</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero/dashboard area -->
+    <section id="overview" class="hero">
+      <div class="hero-grid container">
+        <div class="hero-left glass-card">
+          <h1 class="hero-title">Welcome to Navapura</h1>
+          <p class="lead">A resilient, sustainable and connected city design — neon-glow UI for a premium presentation.</p>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">350k</div>
+              <div class="stat-label">Population (target)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">45 km²</div>
+              <div class="stat-label">Study Area</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">2040</div>
+              <div class="stat-label">Design Year</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#design">View Design</a>
+            <a class="btn ghost" href="#maps">Open Maps</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="floating-card large glass-card">
+            <div class="panel-title">Overview</div>
+            <div class="panel-body">
+              <div class="mini-chart" aria-hidden></div>
+              <div class="panel-stats">
+                <div>Smart zoning • Transit-first • Green corridors</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-row">
+            <div class="floating-card small glass-card">
+              <div class="mini-title">Transit</div>
+              <div class="mini-value">High-priority corridors</div>
+            </div>
+
+            <div class="floating-card small glass-card">
+              <div class="mini-title">Energy</div>
+              <div class="mini-value">District renewables</div>
+            </div>
+
+            <div class="floating-card small glass-card">
+              <div class="mini-title">Parks</div>
+              <div class="mini-value">Green corridors & bioswales</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- team -->
+    <section id="team" class="section">
+      <div class="section-head">
+        <h2>The Creators</h2>
+        <p class="muted">We built Navapura with design thinking, data, and a lot of iteration.</p>
+      </div>
+
+      <div class="cards-row container">
+        <!-- Card 1 -->
+        <article class="team-card glass-card" data-hover>
+          <figure class="avatar">
+            <img src="assets/annapurna.png" alt="Annapurna avatar" onerror="this.style.display='none'">
+            <div class="avatar-fallback">AN</div>
+          </figure>
+          <h3>Annapurna</h3>
+          <p class="role">City Planning & Concept</p>
+          <div class="card-actions">
+            <a class="btn code" href="https://github.com/annapurna-repo" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="team-card glass-card" data-hover>
+          <figure class="avatar">
+            <img src="assets/akmal.png" alt="Akmal avatar" onerror="this.style.display='none'">
+            <div class="avatar-fallback">AK</div>
+          </figure>
+          <h3>Akmal</h3>
+          <p class="role">Maps & Infrastructure</p>
+          <div class="card-actions">
+            <a class="btn code" href="https://github.com/akmal-repo" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="team-card glass-card" data-hover>
+          <figure class="avatar">
+            <img src="assets/amruta.png" alt="Amruta avatar" onerror="this.style.display='none'">
+            <div class="avatar-fallback">AM</div>
+          </figure>
+          <h3>Amruta</h3>
+          <p class="role">Design & Documentation</p>
+          <div class="card-actions">
+            <a class="btn code" href="https://github.com/amruta-repo" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- maps teaser -->
+    <section id="maps" class="section dark-block">
+      <div class="container">
+        <h3 class="subhead">Maps & Zoning</h3>
+        <p class="muted">Interactive maps, zoning layers and transport networks (images / embeds).</p>
+        <div class="map-preview glass-card">MAP PREVIEW</div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="glass-card contact-card">
+          <h3>Contact</h3>
+          <p class="muted">Questions about the project? Reach out.</p>
+          <a class="btn primary" href="mailto:your-email@example.com">Email</a>
+        </div>
+
+        <div class="glass-card metrics">
+          <div class="metric"><div class="mval">Sustainable</div><div class="mlabel">Focus</div></div>
+          <div class="metric"><div class="mval">Transit-first</div><div class="mlabel">Mobility</div></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container center">© 2025 Navapura · DAA Project</div>
+    </footer>
   </div>
-
-  <!-- MAIN CONTENT -->
-  <section class="hero">
-    <h1 class="title">NAVAPURA</h1>
-    <p class="subtitle">A Futuristic Smart City — DAA Project</p>
-    <a href="#team" class="scroll-btn">▼ Explore</a>
-  </section>
-
-  <!-- TEAM SECTION -->
-  <section id="team" class="team-section">
-    <h2 class="team-title">Our Team</h2>
-    <p class="team-sub">Meet the creators behind Navapura City Design</p>
-
-    <div class="team-container">
-
-      <!-- CARD 1 -->
-      <div class="team-card" data-tilt>
-        <div class="glow"></div>
-        <h3>Annapurna</h3>
-        <p>City Planning & Concept</p>
-        <a href="https://github.com/annapurna-repo" target="_blank" class="code-btn">View Code</a>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="team-card" data-tilt>
-        <div class="glow"></div>
-        <h3>Akmal</h3>
-        <p>Maps, Analysis & Layout</p>
-        <a href="https://github.com/akmal-repo" target="_blank" class="code-btn">View Code</a>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="team-card" data-tilt>
-        <div class="glow"></div>
-        <h3>Amruta</h3>
-        <p>UX, Design & Documentation</p>
-        <a href="https://github.com/amruta-repo" target="_blank" class="code-btn">View Code</a>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="footer">
-    © 2025 Navapura — Designed for DAA Project
-  </footer>
 
   <script src="main.js"></script>
 </body>
