@@ -1,180 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About • Navapura</title>
-<link rel="stylesheet" href="style.css">
-<style>
-
-/* ------ PAGE BACKGROUND ------ */
-body {
-    background: radial-gradient(circle at top, #0f172a, #000000);
-    color: #e2e8f0;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* ------ TOP TITLE SECTION ------ */
-.header {
-    text-align: center;
-    padding: 60px 20px 20px;
-}
-
-.header h1 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #38f7cf;
-    text-shadow: 0 0 20px #1cf7c0;
-    animation: fadeIn 1.5s ease-out;
-}
-
-.header p {
-    font-size: 18px;
-    opacity: 0.7;
-}
-
-/* ------ BIG INFO CARD ------ */
-.info-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 28px;
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 0 40px rgba(0,255,200,0.1);
-    animation: slideUp 0.8s ease-out;
-}
-
-/* ------ COURSE DETAILS ------ */
-.section-title {
-    color: #94fdf0;
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-ul li {
-    margin: 6px 0;
-    font-size: 16px;
-}
-
-/* ------ TEAM SECTION ------ */
-.team {
-    margin-top: 40px;
-}
-
-.team-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* ------ TEAM MEMBER CARDS ------ */
-.member-card {
-    width: 260px;
-    padding: 25px;
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: all .3s ease;
-    box-shadow: 0 0 15px rgba(0,255,220,0.05);
-}
-
-.member-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 30px rgba(0,255,220,0.25);
-}
-
-/* Avatar placeholder */
-.avatar {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border: 2px solid #38f7cf;
-    box-shadow: 0 0 15px #1cf7c0;
-}
-
-/* Text inside card */
-.member-name {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #ffffff;
-}
-
-.member-id {
-    opacity: 0.6;
-    font-size: 14px;
-}
-
-/* Animations */
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navapura – Team</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="header">
-    <h1>About Navapura</h1>
-    <p>Smart • Sustainable • Future-Ready City Designed for the DAA Project</p>
-</div>
+    <nav class="navbar">
+        <div class="logo">🏙️ <span>Navapura</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="About.html" class="active">Team</a></li>
+            <li><a href="Maps.html">Maps</a></li>
+            <li><a href="Contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
 
-<div class="info-container">
-
-    <h2 class="section-title">📘 Course Details</h2>
-    <ul>
-        <li><b>Course:</b> Design & Analysis of Algorithms</li>
-        <li><b>Course Code:</b> 24ECSC205</li>
-        <li><b>Instructor:</b> Prof. Prakash Hegade</li>
-        <li><b>Project:</b> City Design</li>
-        <li><b>University:</b> KLE Technological University</li>
-    </ul>
-
-    <div class="team">
-        <h2 class="section-title">👥 Team Members</h2>
+    <section class="team-section">
+        <h1 class="title">Meet the Team</h1>
 
         <div class="team-grid">
 
-            <!-- ANNAPURNA -->
-            <div class="member-card">
-                <div class="avatar"></div>
-                <div class="member-name">Annapurna</div>
-                <div class="member-id">1FE24BCS283</div>
+            <!-- ⭐ ANNAPURNA -->
+            <div class="member-card annapurna-card">
+                <div class="avatar annapurna-avatar"></div>
+                <h2>Annapurna</h2>
+                <p class="id">1FE24BCS283</p>
             </div>
 
-            <!-- AKMAL -->
-            <div class="member-card">
-                <div class="avatar"></div>
-                <div class="member-name">Akmal</div>
-                <div class="member-id">1FE24BCS???</div>
+            <!-- 🔵 AKMAL -->
+            <div class="member-card akmal-card">
+                <div class="avatar akmal-avatar"></div>
+                <h2>Akmal</h2>
+                <p class="id">1FE24BCS___</p>
             </div>
 
-            <!-- AMRUTA -->
-            <div class="member-card">
-                <div class="avatar"></div>
-                <div class="member-name">Amruta</div>
-                <div class="member-id">1FE24BCS???</div>
+            <!-- 🟣 AMRUTA -->
+            <div class="member-card amruta-card">
+                <div class="avatar amruta-avatar"></div>
+                <h2>Amruta</h2>
+                <p class="id">1FE24BCS___</p>
             </div>
 
         </div>
-    </div>
-
-</div>
+    </section>
 
 </body>
 </html>
