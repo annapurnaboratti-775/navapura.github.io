@@ -1,82 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About — Navapura</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About • Navapura</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* ------ PAGE BACKGROUND ------ */
+body {
+    background: radial-gradient(circle at top, #0f172a, #000000);
+    color: #e2e8f0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------ TOP TITLE SECTION ------ */
+.header {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #38f7cf;
+    text-shadow: 0 0 20px #1cf7c0;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.header p {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* ------ BIG INFO CARD ------ */
+.info-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 28px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 40px rgba(0,255,200,0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+/* ------ COURSE DETAILS ------ */
+.section-title {
+    color: #94fdf0;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+ul li {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* ------ TEAM SECTION ------ */
+.team {
+    margin-top: 40px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ------ TEAM MEMBER CARDS ------ */
+.member-card {
+    width: 260px;
+    padding: 25px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all .3s ease;
+    box-shadow: 0 0 15px rgba(0,255,220,0.05);
+}
+
+.member-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 30px rgba(0,255,220,0.25);
+}
+
+/* Avatar placeholder */
+.avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 2px solid #38f7cf;
+    box-shadow: 0 0 15px #1cf7c0;
+}
+
+/* Text inside card */
+.member-name {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.member-id {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+</style>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="nav">
-    <div class="nav-inner container">
-      <a class="brand" href="index.html">Navapura</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="maps.html">Maps</a>
-        <a href="design.html">Design</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-      <button id="navToggle" class="nav-toggle">☰</button>
-    </div>
-  </header>
 
-  <main class="container" style="padding-top:50px">
+<div class="header">
     <h1>About Navapura</h1>
-    <p class="muted">A sustainable smart-city concept developed for the DAA project.</p>
+    <p>Smart • Sustainable • Future-Ready City Designed for the DAA Project</p>
+</div>
 
-    <section class="reveal" data-delay="100" style="margin-top:24px; display:grid; grid-template-columns:2fr 1fr; gap:24px">
-      <div>
-        <h2>Vision</h2>
-        <p>Navapura envisions a future-ready city that blends sustainability, efficient mobility, and vibrant mixed-use neighborhoods. Its planning focuses on minimizing carbon footprint while improving quality of life.</p>
+<div class="info-container">
 
-        <h3>Objectives</h3>
-        <ul>
-          <li>Sustainable water and energy systems</li>
-          <li>Transit-oriented development</li>
-          <li>Green corridors and open spaces</li>
-          <li>Balanced zoning to minimize commute distances</li>
-          <li>Inclusive and accessible urban design</li>
-        </ul>
+    <h2 class="section-title">📘 Course Details</h2>
+    <ul>
+        <li><b>Course:</b> Design & Analysis of Algorithms</li>
+        <li><b>Course Code:</b> 24ECSC205</li>
+        <li><b>Instructor:</b> Prof. Prakash Hegade</li>
+        <li><b>Project:</b> City Design</li>
+        <li><b>University:</b> KLE Technological University</li>
+    </ul>
 
-        <h3>Methodology</h3>
-        <p>The city plan was refined through zoning analysis, transport network modelling, node hierarchy design, and environmental integration.</p>
-      </div>
+    <div class="team">
+        <h2 class="section-title">👥 Team Members</h2>
 
-      <aside class="side-card">
-        <h3>Project Info</h3>
-        <p class="muted">
-          City Area: ~45 sq. km <br>
-          Target Population: ~350,000 <br>
-          Design Horizon: 2040 <br>
-          Planning Layers: Zoning, Transit, Green Infra, Utilities
-        </p>
-        <p><a class="btn primary" href="design.html">View Design</a></p>
-      </aside>
-    </section>
-  </main>
+        <div class="team-grid">
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Navapura</strong>
-        <p class="muted">DAA · 2025</p>
-      </div>
-      <div>
-        <p class="muted">Built by: Your Name</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
+            <!-- ANNAPURNA -->
+            <div class="member-card">
+                <div class="avatar"></div>
+                <div class="member-name">Annapurna</div>
+                <div class="member-id">1FE24BCS283</div>
+            </div>
+
+            <!-- AKMAL -->
+            <div class="member-card">
+                <div class="avatar"></div>
+                <div class="member-name">Akmal</div>
+                <div class="member-id">1FE24BCS???</div>
+            </div>
+
+            <!-- AMRUTA -->
+            <div class="member-card">
+                <div class="avatar"></div>
+                <div class="member-name">Amruta</div>
+                <div class="member-id">1FE24BCS???</div>
+            </div>
+
+        </div>
     </div>
-  </footer>
 
-  <script src="main.js"></script>
+</div>
+
 </body>
 </html>
