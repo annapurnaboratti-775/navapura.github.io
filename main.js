@@ -1,27 +1,30 @@
-// SIMPLE PARALLAX
-document.addEventListener("mousemove", (e) => {
-  const x = e.clientX / window.innerWidth;
-  const y = e.clientY / window.innerHeight;
-
-  document.querySelector(".c1").style.transform = `translate(${x * 20}px, ${y * 20}px)`;
-  document.querySelector(".c2").style.transform = `translate(${x * -30}px, ${y * -30}px)`;
-  document.querySelector(".c3").style.transform = `translate(${x * 15}px, ${y * -15}px)`;
-});
-
-// TILT EFFECT
-document.querySelectorAll("[data-tilt]").forEach(card => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-    let y = e.clientY - rect.top;
-
-    let rotX = (y - rect.height / 2) / 20;
-    let rotY = (x - rect.width / 2) / -20;
-
-    card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+// Parallax background subtle (hero)
+(function(){
+  // small floating motion for right-hand cards
+  const cards = document.querySelectorAll('.floating-card, .team-card');
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth) - 0.5;
+    const y = (e.clientY / window.innerHeight) - 0.5;
+    document.querySelectorAll('.logo-blob').forEach(el => {
+      el.style.transform = `translate(${x*6}px, ${y*6}px) rotate(${x*4}deg)`;
+    });
+    cards.forEach((c, i) => {
+      const depth = (i%3) + 1;
+      c.style.transform = `translate3d(${x*8/depth}px, ${y*8/depth}px, 0)`;
+    });
   });
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  // Smooth reveal for team cards
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(en.isIntersecting) en.target.classList.add('visible');
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.team-card').forEach(c => obs.observe(c));
+
+  // tiny hover pop on buttons
+  document.querySelectorAll('.btn').forEach(b => {
+    b.addEventListener('mouseenter', () => b.style.transform = 'translateY(-4px)');
+    b.addEventListener('mouseleave', () => b.style.transform = '');
   });
-});
+})();
